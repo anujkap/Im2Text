@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Im2Text</string>
+    <string name="img_url_field">Image URL</string>
+    <string name="reg">Search</string>
+</resources>

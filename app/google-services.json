@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "169831536376",
+    "firebase_url": "https://im2text.firebaseio.com",
+    "project_id": "im2text",
+    "storage_bucket": "im2text.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169831536376:android:2417b38b01ecb542",
+        "android_client_info": {
+          "package_name": "com.anuj.im2text"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169831536376-emoj33bpefu4e6amgfgohnpnd929g8e3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA3ZBHmy1wxaflqMnqsAWSbIcZvSw15fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169831536376-emoj33bpefu4e6amgfgohnpnd929g8e3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
