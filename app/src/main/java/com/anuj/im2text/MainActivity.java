@@ -23,7 +23,8 @@ import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity
 {
-
+    final Button T=findViewById(R.id.text_check);
+    Bitmap bitmap= BitmapFactory.decodeResource(getResources(),R.id.image_holder);
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         final EditText editText=findViewById(R.id.image_url_field);
         Button b=findViewById(R.id.search);
-        final Button T=findViewById(R.id.text_check);
         final ImageView imageView=findViewById(R.id.image_holder);
         View.OnClickListener a=new View.OnClickListener()
         {
@@ -43,10 +43,13 @@ public class MainActivity extends AppCompatActivity
             }
         };
         b.setOnClickListener(a);
-        Bitmap bitmap= BitmapFactory.decodeResource(getResources(),R.id.image_holder);
-        private void runTextRecognition()
-        {
-            FirebaseVisionImage image=FirebaseVisionImage.fromBitmap(bitmap);
+
+
+
+    }
+    private void runTextRecognition()
+    {
+        FirebaseVisionImage image=FirebaseVisionImage.fromBitmap(bitmap);
         FirebaseVisionTextRecognizer detector = FirebaseVision.getInstance().getOnDeviceTextRecognizer();
         T.setEnabled(false);
         detector.processImage(image).addOnSuccessListener(
@@ -57,8 +60,8 @@ public class MainActivity extends AppCompatActivity
                     {
                         T.setEnabled(true);
                     }
-                    }
-                ).addOnFailureListener(
+                }
+        ).addOnFailureListener(
                 new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -66,8 +69,6 @@ public class MainActivity extends AppCompatActivity
                         e.printStackTrace();
                     }
                 });
-        }
-
     }
 
 }
